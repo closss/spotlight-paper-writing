@@ -89,11 +89,10 @@ Give me five name candidates for this method.
 ```
 spotlight-paper-writing/
 ├── SKILL.md                         # workflow and rules
-├── references/
-│   ├── latex-snippets.md            # table highlighting template
-│   ├── ai-flavor-blacklist.md       # words, patterns, and rewrites
-│   └── final-checklist.md           # self-review checklist
-└── spotlight-paper-writing.zip      # the archive Claude.ai asks you to upload
+└── references/
+    ├── latex-snippets.md            # table highlighting template
+    ├── ai-flavor-blacklist.md       # words, patterns, and rewrites
+    └── final-checklist.md           # self-review checklist
 ```
 
 ## Scope
