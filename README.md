@@ -20,23 +20,29 @@ The same paragraph after Spotlight:
 
 ## What it enforces
 
-**Narrative before prose.** Spotlight discusses the story with you first: the one-sentence contribution, the specific failure of prior work, the insight, and which results support it. It then builds a skeleton (4–7 sections, 2–4 subsections each, one sentence per subsection) and a claim–evidence table. Claims without evidence get cut or narrowed; experiments that answer no question from the introduction move to the appendix.
+**Narrative before prose.** Spotlight discusses the story with you first: the one-sentence contribution, the specific failure of prior work, the insight, and which results support it. It then helps you pick one of four narrative archetypes that recur in oral papers: removing a component everyone assumed was necessary, redesigning natively around a real constraint, opening a new problem category, or dissecting why a widely used design works. Each archetype comes with the evidence it needs. Next comes a skeleton (4–7 sections, 2–4 subsections each, one sentence per subsection) and a claim–evidence table. Claims without evidence get cut or narrowed; experiments that answer no question from the introduction move to the appendix. The challenges named in the introduction, the design components, and the experiment groups must line up one to one.
 
-**Title.** `MethodName: subtitle`. The method name should be short and memorable, not an acronym forced out of filler words. The subtitle states the mechanism or the finding.
+**Title.** `MethodName: subtitle`. The method name should be short and memorable, not an acronym forced out of filler words. The subtitle carries a counterintuitive insight, a new category, the properties that answer the stated challenges, or the list of findings.
 
-**Abstract.** Problem : method : results ≈ 1 : 1 : 1, opening on the concrete problem, with one or two key numbers.
+**Abstract.** A balanced problem : method : results split, with the problem part capped at about a third; in the reference papers it is usually closer to a fifth. One sentence carries the core contribution or finding. Results name what is compared and under which conditions, with at most one or two numbers.
 
-**Introduction.** Specific failure conditions of existing work ("under X, Y happens because Z"), then the insight and method, then about three verifiable contributions. Emphasis is expressed through facts and numbers, never through "we emphasize" or "importantly".
+**Introduction.** Specific failure conditions of existing work ("under X, Y happens because Z"), pinned down by a measurement, a concrete example, or evidence that prior gains came from somewhere else. Then the insight and method, then about three verifiable contributions. The Figure 1 type follows the archetype. Emphasis is expressed through facts and numbers, never through "we emphasize" or "importantly".
+
+**Experiments.** Every main comparison states what was held fixed, and baselines get strengthened where needed. Trade-off claims get a frontier plot instead of a single operating point. Every "this works because X" claim gets a knockout experiment that removes only X.
 
 **Tables.** Best results get one light, non-green color block (or bold); second best is underlined; the same scheme is used across all tables and figures. A LaTeX template is included.
 
-**Statistics.** Bootstrap intervals and significance tests appear in the one or two core tables only. Everything else goes to the appendix. No pre-registration or "locked protocol" language in the main text.
+**Statistics.** Bootstrap intervals and significance tests appear in at most one or two results, and reporting none is normal: five of the six reference papers have none in the main text. Everything else goes to the appendix. No pre-registration or "locked protocol" language in the main text.
 
 **Hedging.** At most one or two defensive sentences ("…, but this does not imply…") in the whole paper. The skill rewrites the rest by narrowing the claim itself.
 
-**AI flavor.** A blacklist of words and patterns (*delve*, *crucial*, *seamlessly*, *notably*, chains of *Moreover*, trailing *", highlighting…"* clauses, and so on) is checked section by section.
+**AI flavor.** A blacklist of words and patterns (*delve*, *crucial*, *seamlessly*, *notably*, chains of *Moreover*, trailing *", highlighting…"* clauses, and so on) is checked section by section. Words that strong papers do use get a per-paper budget set from counts in the six reference papers, instead of an outright ban.
 
 **Consistency.** One term per concept, identical numbers everywhere they appear, notation defined before use.
+
+## Where the patterns come from
+
+`references/oral-patterns.md` distills recurring moves from a hand-picked set of oral papers: DPO, Genie, NSA, VGGT, Gated Attention, and D4RT. It covers title and abstract patterns, Figure 1 types, method framing, fair-comparison controls, knockout experiments, and how these papers write their limitations. The skill uses it as a menu of proven structures, not as text to copy. The same file records where these papers disagree with the skill's original rules, such as how much of the abstract goes to background, where limitations are disclosed, and how often significance tests appear, and how each rule was adjusted.
 
 ## Workflow
 
@@ -92,6 +98,7 @@ spotlight-paper-writing/
 └── references/
     ├── latex-snippets.md            # table highlighting template
     ├── ai-flavor-blacklist.md       # words, patterns, and rewrites
+    ├── oral-patterns.md             # patterns distilled from oral papers
     └── final-checklist.md           # self-review checklist
 ```
 

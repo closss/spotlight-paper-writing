@@ -39,6 +39,28 @@ Baseline C & 72.8 & 21.0 & 105 \\
 \end{table}
 ```
 
+## 消融表：行编号 + 相对增量
+
+行编号方便正文按编号引用（"row (3) vs. row (1)"）；增量列相对完整模型，只用正负号，不用红绿色。
+
+```latex
+\begin{table}[t]
+\centering
+\caption{Ablations on X. $\Delta$ is relative to the full model (row 1).}
+\label{tab:ablation}
+\begin{tabular}{llcc}
+\toprule
+ & Variant & Err. $\downarrow$ & $\Delta$ \\
+\midrule
+(1) & Full model & \best{0.302} & -- \\
+(2) & w/o component A & 0.373 & $+0.071$ \\
+(3) & w/o component B & 0.345 & $+0.043$ \\
+(4) & A replaced by naive variant & 0.313 & $+0.011$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+```
+
 ## 规则回顾
 
 - 只在第一张表的 caption 说明一次高亮规则，后面的表可以写 "Same notation as Table 1"。
